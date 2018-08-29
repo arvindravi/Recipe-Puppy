@@ -12,6 +12,10 @@
 		A469298D21367949000C23A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A469298B21367949000C23A4 /* Main.storyboard */; };
 		A469298F21367949000C23A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A469298E21367949000C23A4 /* Assets.xcassets */; };
 		A469299221367949000C23A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A469299021367949000C23A4 /* LaunchScreen.storyboard */; };
+		A469299A2136796E000C23A4 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46929992136796E000C23A4 /* Recipe.swift */; };
+		A469299D21367D62000C23A4 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469299C21367D62000C23A4 /* RecipeViewModel.swift */; };
+		A46929A321368483000C23A4 /* RecipeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46929A221368483000C23A4 /* RecipeItemTableViewCell.swift */; };
+		A46929A821369BB2000C23A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46929A721369BB2000C23A4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,11 @@
 		A469298E21367949000C23A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A469299121367949000C23A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A469299321367949000C23A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46929992136796E000C23A4 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		A469299C21367D62000C23A4 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		A46929A221368483000C23A4 /* RecipeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItemTableViewCell.swift; sourceTree = "<group>"; };
+		A46929A721369BB2000C23A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A46929A92136A01C000C23A4 /* RecipePuppyAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +69,45 @@
 				A469298E21367949000C23A4 /* Assets.xcassets */,
 				A469299021367949000C23A4 /* LaunchScreen.storyboard */,
 				A469299321367949000C23A4 /* Info.plist */,
+				A469299B21367975000C23A4 /* Model */,
+				A46929A1213683A7000C23A4 /* Services */,
+				A46929A021368386000C23A4 /* ViewModel */,
+				A46929A42136865C000C23A4 /* View */,
+				A46929A721369BB2000C23A4 /* Constants.swift */,
 			);
 			path = Recipup;
+			sourceTree = "<group>";
+		};
+		A469299B21367975000C23A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A46929992136796E000C23A4 /* Recipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A46929A021368386000C23A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A469299C21367D62000C23A4 /* RecipeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A46929A1213683A7000C23A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A46929A92136A01C000C23A4 /* RecipePuppyAPIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A46929A42136865C000C23A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A46929A221368483000C23A4 /* RecipeItemTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46929A321368483000C23A4 /* RecipeItemTableViewCell.swift in Sources */,
+				A469299D21367D62000C23A4 /* RecipeViewModel.swift in Sources */,
+				A469299A2136796E000C23A4 /* Recipe.swift in Sources */,
+				A46929A821369BB2000C23A4 /* Constants.swift in Sources */,
 				A469298A21367949000C23A4 /* ViewController.swift in Sources */,
 				A469298821367949000C23A4 /* AppDelegate.swift in Sources */,
 			);
