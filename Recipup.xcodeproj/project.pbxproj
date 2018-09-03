@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04177C5A574F90EC6A2A64E6 /* Pods_Recipup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39A787EF7A3ED35EFFA893F /* Pods_Recipup.framework */; };
 		A469298821367949000C23A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469298721367949000C23A4 /* AppDelegate.swift */; };
 		A469298A21367949000C23A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469298921367949000C23A4 /* ViewController.swift */; };
 		A469298D21367949000C23A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A469298B21367949000C23A4 /* Main.storyboard */; };
@@ -16,9 +17,15 @@
 		A469299D21367D62000C23A4 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469299C21367D62000C23A4 /* RecipeViewModel.swift */; };
 		A46929A321368483000C23A4 /* RecipeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46929A221368483000C23A4 /* RecipeItemTableViewCell.swift */; };
 		A46929A821369BB2000C23A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46929A721369BB2000C23A4 /* Constants.swift */; };
+		A46929AA2136A075000C23A4 /* RecipePuppyAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46929A92136A01C000C23A4 /* RecipePuppyAPIService.swift */; };
+		A46929AC2136A15E000C23A4 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46929AB2136A15E000C23A4 /* Resource.swift */; };
+		A46929AE2136C4A4000C23A4 /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46929AD2136C4A4000C23A4 /* ImageOperation.swift */; };
+		A496C6FC213701CB00D7B559 /* UserDefaults+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496C6FB213701CB00D7B559 /* UserDefaults+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0786C9B527C033F9A3F34880 /* Pods-Recipup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recipup/Pods-Recipup.debug.xcconfig"; sourceTree = "<group>"; };
+		10C86EC1A4F63DCC331547A6 /* Pods-Recipup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recipup/Pods-Recipup.release.xcconfig"; sourceTree = "<group>"; };
 		A469298421367949000C23A4 /* Recipup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A469298721367949000C23A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A469298921367949000C23A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +38,10 @@
 		A46929A221368483000C23A4 /* RecipeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItemTableViewCell.swift; sourceTree = "<group>"; };
 		A46929A721369BB2000C23A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A46929A92136A01C000C23A4 /* RecipePuppyAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyAPIService.swift; sourceTree = "<group>"; };
+		A46929AB2136A15E000C23A4 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		A46929AD2136C4A4000C23A4 /* ImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
+		A496C6FB213701CB00D7B559 /* UserDefaults+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Helper.swift"; sourceTree = "<group>"; };
+		F39A787EF7A3ED35EFFA893F /* Pods_Recipup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recipup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04177C5A574F90EC6A2A64E6 /* Pods_Recipup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B2FCBD78EEDF6AB5F1E2B5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F39A787EF7A3ED35EFFA893F /* Pods_Recipup.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A469297B21367949000C23A4 = {
 			isa = PBXGroup;
 			children = (
 				A469298621367949000C23A4 /* Recipup */,
 				A469298521367949000C23A4 /* Products */,
+				B3139B044D66A4720C77A4F3 /* Pods */,
+				1B2FCBD78EEDF6AB5F1E2B5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,16 +86,16 @@
 			isa = PBXGroup;
 			children = (
 				A469298721367949000C23A4 /* AppDelegate.swift */,
-				A469298921367949000C23A4 /* ViewController.swift */,
-				A469298B21367949000C23A4 /* Main.storyboard */,
-				A469298E21367949000C23A4 /* Assets.xcassets */,
+				A46929A721369BB2000C23A4 /* Constants.swift */,
 				A469299021367949000C23A4 /* LaunchScreen.storyboard */,
-				A469299321367949000C23A4 /* Info.plist */,
 				A469299B21367975000C23A4 /* Model */,
 				A46929A1213683A7000C23A4 /* Services */,
 				A46929A021368386000C23A4 /* ViewModel */,
 				A46929A42136865C000C23A4 /* View */,
-				A46929A721369BB2000C23A4 /* Constants.swift */,
+				A4EB0235213D174C001E1185 /* Helpers */,
+				A469299321367949000C23A4 /* Info.plist */,
+				A469298B21367949000C23A4 /* Main.storyboard */,
+				A469298E21367949000C23A4 /* Assets.xcassets */,
 			);
 			path = Recipup;
 			sourceTree = "<group>";
@@ -82,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				A46929992136796E000C23A4 /* Recipe.swift */,
+				A46929AB2136A15E000C23A4 /* Resource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				A46929A92136A01C000C23A4 /* RecipePuppyAPIService.swift */,
+				A46929AD2136C4A4000C23A4 /* ImageOperation.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -105,9 +129,27 @@
 		A46929A42136865C000C23A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A469298921367949000C23A4 /* ViewController.swift */,
 				A46929A221368483000C23A4 /* RecipeItemTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A4EB0235213D174C001E1185 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A496C6FB213701CB00D7B559 /* UserDefaults+Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B3139B044D66A4720C77A4F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0786C9B527C033F9A3F34880 /* Pods-Recipup.debug.xcconfig */,
+				10C86EC1A4F63DCC331547A6 /* Pods-Recipup.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A469299621367949000C23A4 /* Build configuration list for PBXNativeTarget "Recipup" */;
 			buildPhases = (
+				4D1F9374C8DD200FDE25973D /* [CP] Check Pods Manifest.lock */,
 				A469298021367949000C23A4 /* Sources */,
 				A469298121367949000C23A4 /* Frameworks */,
 				A469298221367949000C23A4 /* Resources */,
+				114A9A18E83D108C64DCDEF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,16 +221,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		114A9A18E83D108C64DCDEF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Recipup/Pods-Recipup-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Whisper/Whisper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Whisper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recipup/Pods-Recipup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D1F9374C8DD200FDE25973D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Recipup-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A469298021367949000C23A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46929AA2136A075000C23A4 /* RecipePuppyAPIService.swift in Sources */,
+				A46929AC2136A15E000C23A4 /* Resource.swift in Sources */,
 				A46929A321368483000C23A4 /* RecipeItemTableViewCell.swift in Sources */,
 				A469299D21367D62000C23A4 /* RecipeViewModel.swift in Sources */,
 				A469299A2136796E000C23A4 /* Recipe.swift in Sources */,
 				A46929A821369BB2000C23A4 /* Constants.swift in Sources */,
+				A496C6FC213701CB00D7B559 /* UserDefaults+Helper.swift in Sources */,
 				A469298A21367949000C23A4 /* ViewController.swift in Sources */,
+				A46929AE2136C4A4000C23A4 /* ImageOperation.swift in Sources */,
 				A469298821367949000C23A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +411,7 @@
 		};
 		A469299721367949000C23A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0786C9B527C033F9A3F34880 /* Pods-Recipup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -337,6 +427,7 @@
 		};
 		A469299821367949000C23A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10C86EC1A4F63DCC331547A6 /* Pods-Recipup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

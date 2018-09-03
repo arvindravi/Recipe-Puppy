@@ -10,6 +10,11 @@ import Foundation
 
 struct K {
   struct URLEndpoints {
-    static let RecipeSearchEndpoint: URL = URL(string: "http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3")!
+    static let RecipeSearchEndpointString = "http://www.recipepuppy.com/api/?q="
   }
+  static let DefaultNumberOfAttempts: Int = 3
+  static let DefaultTimeoutCapForExponentialBackoffInSeconds: Double = 10000
+  static let SessionTimeoutDurationInSeconds: Double = 10
+  
+  static let UseExponentialBackoffAsTheRetryStrategy: Bool = false
 }
