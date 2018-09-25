@@ -90,7 +90,7 @@ class RecipeViewModel: NSObject {
   public func getRecipesByRetrying(completion: @escaping (_ result: FetchResult) -> Void) {
     if !isFirstRetryAttempt {
       // Cap the interval after it has grown considerably, and fail gracefully.
-      if currentInterval > 10000 {
+      if currentInterval > UserDefaults.standard.defaultTimeOutCapForExponentialBackoffInSeconds {
         // Reset Interval
         currentInterval = 1.0
         
@@ -171,7 +171,7 @@ class RecipeViewModel: NSObject {
     isFirstRetryAttempt = false
     isLoading = true
     
-    guard let url = URL(string: K.URLEndpoints.RecipeSearchEndpointString.appending(searchQuery)) else { return }
+    guard let url = URL(string: K.URLEndpoints.RecipeSearchEndpointString.appending(searchQuery.stringByAddingPercentEncoding)) else { return }
     
     recipePuppyAPIService.fetch(url: url) { result in
       switch result {
@@ -210,7 +210,7 @@ class RecipeViewModel: NSObject {
     isFirstRetryAttempt = false
     isLoading = true
     
-    guard let url = URL(string: K.URLEndpoints.RecipeSearchEndpointString.appending(searchQuery)) else { return }
+    guard let url = URL(string: K.URLEndpoints.RecipeSearchEndpointString.appending(searchQuery.stringByAddingPercentEncoding)) else { return }
     
     recipePuppyAPIService.fetch(url: url) { result in
       switch result {

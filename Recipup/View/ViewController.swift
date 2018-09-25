@@ -54,35 +54,20 @@ class ViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     setupReachability()
+    navigationItem.hidesSearchBarWhenScrolling = false
   }
   
-  func setupReachability() {
-    NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
-    do{
-      try reachability.startNotifier()
-    }catch{
-      print("could not start reachability notifier")
-    }
-  }
-  
-  @objc func reachabilityChanged(note: Notification) {
-    let reachability = note.object as! Reachability
-    switch reachability.connection {
-    case .wifi:
-      print("Reachable via WiFi")
-      self.hideWhisper()
-    case .cellular:
-      print("Reachable via Cellular")
-      self.hideWhisper()
-    case .none:
-      self.whisper(message: "No Internet Connection.", textColor: .white, backgroundColor: .red, isPermananent: true)
-    }
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    navigationItem.hidesSearchBarWhenScrolling = true
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
   }
+  
+  // MARK: Setup Methods
   
   func setup() {
     // View Model Setup
@@ -174,9 +159,27 @@ class ViewController: UIViewController {
     }  
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  private func setupReachability() {
+    NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+    do{
+      try reachability.startNotifier()
+    }catch{
+      print("could not start reachability notifier")
+    }
+  }
+  
+  @objc func reachabilityChanged(note: Notification) {
+    let reachability = note.object as! Reachability
+    switch reachability.connection {
+    case .wifi:
+      print("Reachable via WiFi")
+      self.hideWhisper()
+    case .cellular:
+      print("Reachable via Cellular")
+      self.hideWhisper()
+    case .none:
+      self.whisper(message: "No Internet Connection.", textColor: .white, backgroundColor: .red, isPermananent: true)
+    }
   }
   
   // MARK: - Helper Methods
@@ -202,12 +205,6 @@ class ViewController: UIViewController {
     
     // Show and hide a message after delay
     Whisper.show(whistle: murmur, action: .show(15))
-    
-//    // Present a permanent status bar message
-//    Whisper.show(whistle: murmur, action: .present)
-//
-//    // Hide a message
-//    Whisper.hide(whistleAfter: 3)
   }
   
   fileprivate func hideMurmur() {
@@ -257,8 +254,8 @@ extension ViewController: UISearchBarDelegate {
     if isLoadingRecipes {
       cancelPreviousFetchRequests()
     }
-    
-    cancelPreviousFetchRequests()
+
+    // Build a query based on searchText and execute fetch
     
     // Set Search Query for Fetch
     searchQuery = searchText
@@ -275,7 +272,7 @@ extension ViewController: UISearchBarDelegate {
   }
 }
 
-// MARK: Data Source Methods
+// MARK: Tableview Data Source Methods
 extension ViewController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
@@ -298,15 +295,16 @@ extension ViewController: UITableViewDataSource {
   }
 }
 
+// MARK: Tableview Delegate
 extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 200
   }
 }
 
+// MARK: - Helper Method on TableView to display errors
 extension UITableView {
   func displayError(_ error: Error?) {
-    
     var errorMessage = ""
     if let error = error {
       errorMessage = error.localizedDescription
@@ -314,37 +312,12 @@ extension UITableView {
       errorMessage = "Unknown Error."
     }
     
-    
-//    switch error {
-//    case URLError.networkConnectionLost, URLError.notConnectedToInternet:
-//      errorMessage = "No Internet"
-//    case URLError.cannotFindHost, URLError.cannotFindHost:
-//      errorMessage = "Cannot find host. Failed after retrying."
-//    case URLError.timedOut:
-//      errorMessage =
-//    default:
-//      errorMessage = "Unknown Error. \(error.localizedDescription)"
-//    }
-    
-    // TODO: Make Errors Useful
-    
     let errorLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
     errorLabel.text = errorMessage
     errorLabel.textColor  = UIColor.red
     errorLabel.textAlignment = .center
     backgroundView = errorLabel
     separatorStyle = .none
-    setNeedsDisplay()
-  }
-  
-  func displayMessage(_ message: String) {
-    let messageLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
-    messageLabel.text = message
-    messageLabel.textColor  = UIColor.blue
-    messageLabel.textAlignment = .center
-    backgroundView = messageLabel
-    separatorStyle = .none
-    setNeedsDisplay()
   }
 }
 

@@ -11,7 +11,6 @@ import Foundation
 /// RecipePuppyAPIService: Class used to interface with the Recipe Puppy API
 class RecipePuppyAPIService: NSObject {
   
-  
   // MARK: Properties
   
   // Setup

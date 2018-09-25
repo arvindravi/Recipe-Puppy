@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04177C5A574F90EC6A2A64E6 /* Pods_Recipup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39A787EF7A3ED35EFFA893F /* Pods_Recipup.framework */; };
+		A4137579213D275700E9EAC6 /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4137578213D275700E9EAC6 /* String+Util.swift */; };
 		A469298821367949000C23A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469298721367949000C23A4 /* AppDelegate.swift */; };
 		A469298A21367949000C23A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469298921367949000C23A4 /* ViewController.swift */; };
 		A469298D21367949000C23A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A469298B21367949000C23A4 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		0786C9B527C033F9A3F34880 /* Pods-Recipup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recipup/Pods-Recipup.debug.xcconfig"; sourceTree = "<group>"; };
 		10C86EC1A4F63DCC331547A6 /* Pods-Recipup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recipup/Pods-Recipup.release.xcconfig"; sourceTree = "<group>"; };
+		A4137578213D275700E9EAC6 /* String+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Util.swift"; sourceTree = "<group>"; };
 		A469298421367949000C23A4 /* Recipup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A469298721367949000C23A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A469298921367949000C23A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				A496C6FB213701CB00D7B559 /* UserDefaults+Helper.swift */,
+				A4137578213D275700E9EAC6 /* String+Util.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				A496C6FC213701CB00D7B559 /* UserDefaults+Helper.swift in Sources */,
 				A469298A21367949000C23A4 /* ViewController.swift in Sources */,
 				A46929AE2136C4A4000C23A4 /* ImageOperation.swift in Sources */,
+				A4137579213D275700E9EAC6 /* String+Util.swift in Sources */,
 				A469298821367949000C23A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arvindravi.Recipup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -437,7 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arvindravi.Recipup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
